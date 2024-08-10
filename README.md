@@ -3,4 +3,4 @@
 ## study_GO
 GO言語の勉強
 ### practice_01
-課題1
+GO言語の勉強　課題01
