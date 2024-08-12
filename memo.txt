@@ -1,2 +1,3 @@
 .gitignore 
     Githubの、管理対象外にする。
+Obsidianのコールアウト記法
