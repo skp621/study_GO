@@ -1,6 +1,6 @@
 //**************************************************
 //
-//  FizzBuzz
+//  Reverce FizzBuzz
 //										2024.08.17
 //**************************************************
 
@@ -10,9 +10,9 @@ import "fmt"
 
 func main() {
 
-	for i := 1; i < 21; i++ { // perform varying i from 1 by 1 until i > 20
+	for i := 15; i >= 1; i-- {
 
-		if i%3 == 0 && i%5 == 0 { // and ではない &&
+		if i%3 == 0 && i%5 == 0 {
 
 			fmt.Println("FizzBuzz")
 
