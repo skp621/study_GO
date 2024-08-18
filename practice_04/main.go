@@ -9,7 +9,9 @@ package main
 import "fmt"
 
 // 関数
-func fizzbuzz(j int) k {
+func fizzbuzz(j int) string {
+
+	var k string
 
 	if j%3 == 0 && j%5 == 0 {
 
@@ -28,7 +30,7 @@ func fizzbuzz(j int) k {
 
 	} else {
 
-		k = j
+		k = fmt.Sprintf("%d", j)
 		return k
 
 	}
@@ -39,11 +41,9 @@ func main() {
 
 	for i := 1; i < 21; i++ {
 
-		j = i
+		result := fizzbuzz(i)
 
-		fizzbuzz(j)
-
-		fmt.Println(k)
+		fmt.Println(result)
 
 	}
 
