@@ -9,23 +9,27 @@ package main
 import "fmt"
 
 // 関数
-func fizzbuzz(j k) k {
+func fizzbuzz(j int) k {
 
 	if j%3 == 0 && j%5 == 0 {
 
 		k = "FizzBuzz"
+		return k
 
 	} else if j%3 == 0 {
 
 		k = "Fizz"
+		return k
 
 	} else if j%5 == 0 {
 
 		k = "Buzz"
+		return k
 
 	} else {
 
 		k = j
+		return k
 
 	}
 
@@ -35,23 +39,11 @@ func main() {
 
 	for i := 1; i < 21; i++ {
 
-		if i%3 == 0 && i%5 == 0 {
+		j = i
 
-			fmt.Println("FizzBuzz")
+		fizzbuzz(j)
 
-		} else if i%3 == 0 {
-
-			fmt.Println("Fizz")
-
-		} else if i%5 == 0 {
-
-			fmt.Println("Buzz")
-
-		} else {
-
-			fmt.Println(i)
-
-		}
+		fmt.Println(k)
 
 	}
 
