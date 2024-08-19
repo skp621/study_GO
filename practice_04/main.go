@@ -1,6 +1,6 @@
 //**************************************************
 //
-//  FizzBuzz 関数化
+//  FizzBuzz 関数
 //										2024.08.18
 //**************************************************
 
@@ -39,7 +39,19 @@ func fizzbuzz(j int) string {
 
 func main() {
 
+	fmt.Println("<< 1から20まで昇順でFizzBuzz判定 >>")
+
 	for i := 1; i < 21; i++ {
+
+		result := fizzbuzz(i)
+
+		fmt.Println(result)
+
+	}
+
+	fmt.Println("<< 15から1まで降順でFizzBuzz判定 >>")
+
+	for i := 15; i >= 1; i-- {
 
 		result := fizzbuzz(i)
 
