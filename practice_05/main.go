@@ -1,7 +1,7 @@
 //**************************************************
 //
-//  FizzBuzz 関数
-//										2024.08.19
+//  Reverse FizzBuzz 関数
+//										2024.08.20
 //**************************************************
 
 package main
@@ -39,7 +39,7 @@ func fizzbuzz(j int) string {
 
 func main() {
 
-	for i := 1; i < 21; i++ {
+	for i := 15; i >= 1; i-- {
 
 		result := fizzbuzz(i)
 
