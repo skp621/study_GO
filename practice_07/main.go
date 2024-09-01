@@ -47,11 +47,10 @@ func Div(h, i int) (int, error) {
 }
 
 func main() {
-	fmt.Println(Add(1, 1)) // Output: 15
-	fmt.Println(Sub(1, 1)) // Output: 5
-	fmt.Println(Mul(1, 1)) // Output: 50
+	fmt.Println(Add(1, 1))
+	fmt.Println(Sub(1, 1))
+	fmt.Println(Mul(1, 1))
 
-	// Handling the result of Div with error checking
 	result, err := Div(1, 0)
 	if err != nil {
 		fmt.Println("エラーコード:", err)
