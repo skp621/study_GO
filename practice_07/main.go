@@ -51,7 +51,14 @@ func main() {
 	fmt.Println(Sub(1, 1))
 	fmt.Println(Mul(1, 1))
 
-	result, err := Div(1, 0)
+	result, err := Div(1, 1)
+	if err != nil {
+		fmt.Println("エラーコード:", err)
+	} else {
+		fmt.Println(result)
+	}
+
+	result, err = Div(1, 0)
 	if err != nil {
 		fmt.Println("エラーコード:", err)
 	} else {
