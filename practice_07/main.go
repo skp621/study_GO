@@ -50,7 +50,7 @@ func main() {
 	if err != nil {
 		fmt.Println("エラーコード0:", err)
 	} else {
-		fmt.Println(result) // 1
+		fmt.Println(result)
 	}
 
 	result, err = Div(1, 0)
@@ -63,6 +63,10 @@ func main() {
 	test_calculator()
 
 }
+
+// 関数のテスト
+//
+//(２)
 
 func test_calculator() {
 
