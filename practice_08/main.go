@@ -27,26 +27,32 @@ func main() {
 	fmt.Println("右辺を入力してください")
 	fmt.Scanln(&b)
 
+	var result int
+
 	// 演算子に応じて計算を実行
 	switch c {
 	case "+":
-		result := kansu.Add(a, b)
-		fmt.Println("答え:", result)
+		result = kansu.Add(a, b)
+		//fmt.Println("答え:", result)
 	case "-":
-		result := kansu.Sub(a, b)
-		fmt.Println("答え:", result)
+		result = kansu.Sub(a, b)
+		//fmt.Println("答え:", result)
 	case "*":
-		result := kansu.Mul(a, b)
-		fmt.Println("答え:", result)
+		result = kansu.Mul(a, b)
+		//fmt.Println("答え:", result)
 	case "/":
 		// 割り算でエラー処理
-		result, err := kansu.Div(a, b)
+		var err error
+		result, err = kansu.Div(a, b)
 		if err != nil {
 			fmt.Println("エラー:", err)
+			return
 		} else {
-			fmt.Println("答え:", result)
+			//fmt.Println("答え:", result)
 		}
 	default:
 		fmt.Println("無効な演算子が入力されました。+、-、*、/ のいずれかを入力してください。")
+		return
 	}
+	fmt.Println("答え:", result)
 }
