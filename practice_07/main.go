@@ -34,7 +34,6 @@ func Div(a, b int) (int, error) {
 }
 
 // 関数のテスト
-//
 //(1)
 
 func main() {
@@ -65,7 +64,6 @@ func main() {
 }
 
 // 関数のテスト
-//
 //(２)
 
 func test_calculator() {
