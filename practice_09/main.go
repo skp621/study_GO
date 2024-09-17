@@ -2,7 +2,7 @@
 //
 //  世界のナベアツ
 //
-//          2024.09.15
+//          2024.09.17
 //
 // **************************************************
 
@@ -40,16 +40,27 @@ func main() {
 		min = a
 	}
 
-	for i := min; i <= max; i++ {
+	fmt.Println("3を含むほうが、3の倍数よりも、優先されます！")
 
-		// todo: ３の倍数の判定を追加
+	for i := min; i <= max; i++ {
 
 		c = strconv.Itoa(i)
 
 		if strings.Contains(c, "3") {
-			fmt.Println("さん！")
+
+			fmt.Println("さん！(含む)")
+
 		} else {
-			fmt.Println(i)
+
+			if i%3 == 0 {
+
+				fmt.Println("さん！(倍数)")
+
+			} else {
+
+				fmt.Println(i)
+
+			}
 		}
 	}
 }
