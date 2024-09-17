@@ -26,31 +26,30 @@ func main() {
 	fmt.Scanln(&b)
 
 	//入力値の大小により分岐
+	var max int
+	var min int
 
 	if a > b {
 
-		for i := a; i >= b; i-- {
-
-			c = strconv.Itoa(i)
-
-			if strings.Contains(c, "3") {
-				fmt.Println("さん！")
-			} else {
-				fmt.Println(i)
-			}
-		}
+		max = a
+		min = b
 
 	} else {
 
-		for i := a; i <= b; i++ {
+		max = b
+		min = a
+	}
 
-			c = strconv.Itoa(i)
+	for i := min; i <= max; i++ {
 
-			if strings.Contains(c, "3") {
-				fmt.Println("さん！")
-			} else {
-				fmt.Println(i)
-			}
+		// todo: ３の倍数の判定を追加
+
+		c = strconv.Itoa(i)
+
+		if strings.Contains(c, "3") {
+			fmt.Println("さん！")
+		} else {
+			fmt.Println(i)
 		}
 	}
 }
