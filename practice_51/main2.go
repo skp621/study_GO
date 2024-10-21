@@ -3,6 +3,8 @@ package main
 import (
 	"encoding/json"
 	"net/http"
+
+	"github.com/gorilla/mux"
 )
 
 type Response struct {
@@ -10,12 +12,13 @@ type Response struct {
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
-	response := Response{Message: "Hello, World!"}
+	response := Response{Message: "Hello from Gorilla Mux!"}
 	w.Header().Set("Content-Type", "application/json")
 	json.NewEncoder(w).Encode(response)
 }
 
 func main() {
-	http.HandleFunc("/api/hello", handler)
-	http.ListenAndServe(":8080", nil)
+	r := mux.NewRouter()
+	r.HandleFunc("/api/hello", handler).Methods("GET")
+	http.ListenAndServe(":8080", r)
 }
